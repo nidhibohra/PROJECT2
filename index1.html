@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>WEBPAGE</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<style>
+
+    
+.font{
+    font-weight: bold;
+    color: white;
+    border: 1px solid white;
+    padding: 20px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(to left, rgba(157, 247, 187, 0.5), rgba(1, 31, 25, 0.5));
+  /* background: linear-gradient(to right, rgba(196, 113, 245, 0.5), rgba(250, 113, 205, 0.5)); */
+  /* background: linear-gradient(to bottom, rgba(48, 207, 208, 0.5), rgba(51, 8, 103, 0.5)); */
+
+}
+.main{
+    min-height: 50vh;
+    /* background-image: linear-gradient(rgb(255, 0, 221), rgb(44, 106, 148),rgb(49, 240, 65)); */
+
+}
+.row a:hover{
+  color: black;
+  background-color: white;
+}
+.door:hover{
+  box-shadow: inset -10.5em 0 0 0 #ff96ad,inset 10.5em 0 0 0 #ff96ad;
+}
+.card-hover:hover{
+  transform: scale(1.05);
+
+    box-shadow: 0 10px 20px rgba(236, 20, 128, 0.918), 0 4px 8px rgba(243, 3, 103, 0.877);
+}
+.form
+{
+background-color: rgb(25, 1, 63);
+color: white;
+width: 100%;
+}
+td,tr,th{
+  color: white;
+}
+</style>
+<script>
+    $('#frm').submit(function()
+    {
+    // e.preventDefault();
+    var fname=document.getElementById("fname").value;
+    var lname=document.getElementById("lname").value;
+    var number=document.getElementById("phone").value;
+    var category=document.getElementById("example1").value;
+    console.log(category)
+    var html="<table border=1>";
+  
+      html+="<tr>";
+        html+="<th>Name</th><th>Email</th><th>Mobile number</th><th>Category</th>";
+        html+="</tr>";
+        html+="<tr>";
+        html+="<td>"+fname+"</td><td>"+lname+"</td><td>"+number+"</td><td>"+category+"</td>";
+        html+="</tr>";
+        html+="</table>";
+        document.getElementById("details").innerHTML=html;
+      });
+  </script>
+<body>
+    <div class="col-sm-12  text-center p-4 font-weight-bold" style="background-color: lightgreen;">
+        <nav class="navbar">
+            <a class="navbar-brand mx-auto" href="#">
+              <img src="greentrendlogo" width="70%" alt="">
+            </a>
+          </nav> 
+        </div>
+  <div class="col-sm-12 bg-dark p-3 ">
+    <div class="row">
+     
+        <div class="col-sm-9">
+            <nav class="row">
+               
+                    <a class="nav-link font" href="#home">HOME</a>&nbsp;
+
+                   
+                    <a class="nav-link font" href="#about">ABOUT US</a>&nbsp;
+                    
+                    
+                
+                    <a class="nav-link font" href="#offers">OUR OFFERS</a>&nbsp;
+
+                    <a class="nav-link font" href="#book">BOOK APPOINTMENT</a>&nbsp;
+                
+                    <!-- <a class="nav-link font " href="#">CONTACT</a>&nbsp; -->
+                        
+
+                </ul>
+            </nav>
+            
+        </div>
+        <div class="col-sm-3">
+            <nav class="navbar">
+                <ul class="navbar-nav">
+                   
+                     <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                     
+                   
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+<!-- <div class="col-md-3 mb-3">
+  <div class=" container night-fade-gradient color-block sm-3 mx-auto rounded-circle z-depth-1-half"></div>
+</div> -->
+<br>
+<div class="col-sm-12" id="home">
+     <div class="row justify-content-center ">
+        <div class="card col-sm-3 card-hover">
+            <img  src="hairstraight.jpg" class="rounded-circle" alt="Cinque Terre" style="height: 250px;" >
+            <div class="card-header bg-danger text-center my-2"><p><b>HAIR STRAIGHTENING</b></p>
+            </div>
+            <!-- <div class="card-body"> -->
+            <!-- </div> -->
+            <a href="#book" class="btn door">BOOK NOW</a>
+        </div>&nbsp;&nbsp;&nbsp;
+        <div class="card col-sm-3 p-2 card-hover">
+            <img src="bride.jpg" class="rounded-circle" alt="Cinque Terre" style="height: 250px;" > 
+            <div class="card-header bg-danger text-center my-2"><p><b>BRIDAL MAKEUP</b></p>
+            </div>
+            <!-- <div class="card-body"> -->
+            <!-- </div> -->
+            <a href="#book" class="btn door">BOOK NOW</a>
+        </div>&nbsp;&nbsp;&nbsp;
+        <div class="card col-sm-3 p-2 card-hover">
+            <img src="bodycare.jpg" class="rounded-circle" alt="Cinque Terre" style="height: 250px;"> 
+            <div class="card-header bg-danger text-center my-2"><p><b>BODY CARE</b></p>
+            </div>
+            <!-- <div class="card-body"> -->
+            <!-- </div> -->
+            <a href="#book" class="btn door">BOOK NOW</a>
+         </div>
+     </div>
+</div>    
+
+<div class= "main container-fluid my-3" id="about">
+    <div class="text-center">
+      <div class="col-sm-2 mx-auto">
+      <h3 style="border: 1px solid black; background-color:black; color: white;">ABOUT US</h3></div>
+      <p>Stylish, Sleek, and Smooth. This haircut goes perfectly well with different face shapes and hair types.
+          A limitless look for a limitless life.
+              
+      This easy to maintain haircut keeps you on the go as it requires almost no maintenance. It's an ideal choice if you've always wanted medium-length hair with slightly shorter sides.green trends promises a SAFE SALON experience designed with the highest-order of safety standards in consultation with medical experts and compliance of government norms. Our salons will follow safe social distancing norms where only 2 customers per section will be served.</p>
+    </div>
+    <div class="text-center">
+      <div class="col-sm-4 mx-auto">
+        <h3 style="border: 1px solid black; background-color:black; color: white;">OUR SALONS HAVE</h3></div>
+       <p>
+        <a></a>100% Vaccinated Stylists</a><br>
+        <a></a>40+ Safety Protocols</a><br> 
+         <a>Certified Disinfected Salons</a><br>
+      </p>
+      <div class="text-center">
+        <div class="col-sm-6 mx-auto">
+          <h3 style="border: 1px solid black; background-color:black; color: white;">INTRODUCING TO MID FACE CUT</h3></div>
+      <p>Fuelled by the vision of making beauty and styling accessible to all, an aspiration that was earlier restricted only to the privileged, FMCG giant Cavinkare launched a first-of-its-kind professional, unisex salon chain “green trends”.</P> Green Trends transformed the landscape of salons and made beauty and styling aspirations a reality for all. With a vast network of 375+ salons, green trends delivers its vision of accessible beauty and styling services to the far-reaching corners of the country with its presence across 50+ cities.</P> With scientifically designed services using world-class products delivered by certified skin and hair experts, green trends caters to one’s head-to-toe grooming, beauty and styling needs at exceptional value.
+
+        A strong proponent of the philosophy that beauty and style is unique to each, green trends’ experience is built on the pillar of a ‘culture of consultation’ where our certified experts hand-pick products and recommend salon services best suited for every individual customer.</p>
+    </div> 
+  </div>
+  <marquee behavior="scroll" scrollamount="13" direction="left bg-muted" class="mt-3" id="offers"><img src="offer1.jpg">&nbsp;&nbsp;&nbsp;&nbsp; <img src="offer2.jpg">&nbsp;&nbsp;&nbsp;&nbsp; <img src="offer3.jpg">&nbsp;&nbsp;&nbsp;&nbsp; <img src="offer4.jpg" style="height: 230px;">&nbsp;&nbsp;&nbsp;&nbsp;</marquee>
+  
+<div id="book">
+  <div class="col-sm-12 font-weight-bold" id="form">
+
+    <div class="row">
+
+         <div  class="col-sm-6 container-fluid p-lg-4 form ">
+
+                 <form id="frm" >
+
+                     <div class="form-group">
+
+                          <label class="control-label col-sm-3" for="name" >NAME:</label>
+
+                          <div class="col-sm-9">
+
+                              <input type="text" class="form-control" id="name" placeholder="Enter name">
+
+                          </div>
+
+                     </div>
+
+                     <div class="form-group">
+
+                        <label class="control-label col-sm-3">Email:</label>
+
+                        <div class="col-sm-9">
+
+                            <input type="email" class="form-control" id="email" placeholder="Enter email">
+
+                        </div>
+
+                     </div>
+                     <div class="form-group">
+
+                      <label class="control-label col-sm-3">PhoneNumber:</label>
+
+                          <div class="col-sm-9">
+
+                              <input type="number" class="form-control" id="pnum" placeholder="Enter number">
+
+                          </div>
+
+                      </div>
+                      <div class="form-group">
+
+                        <label class="control-label col-sm-9">ENTER YOUR DETAILS:</label>
+   
+                      </div>
+    
+                      <div class="form-group">
+                        <div class="row">
+                         <div class="col-sm-2">
+                           &nbsp;
+                         </div>
+
+                        <div class="col-sm-10">
+
+                            <div class="checkbox" id="ch">
+
+                              <input type="checkbox" id="check1" name="booked" value="HAIR CARE">
+                              <label>HAIR CARE</label><br>
+                              <input type="checkbox" id="check2" name="booked" value="BODY CARE">
+                              <label>BODY CARE</label><br>
+                              <input type="checkbox" id="check3" name="booked" value="BRIDAL MAKEUP">
+                              <label>BRIDAL MAKEUP</label><br>
+                              <input type="checkbox" id="check4" name="booked" value="CLEAN UP">
+                              <label>CLEAN UP</label><br>
+                              <input type="checkbox" id="check5" name="booked" value="THREADING">
+                              <label>THREADING</label><br>
+
+                            </div>
+                        </div>
+                      </div>
+                      </div>
+            <button id="su" type="submit" class="btn subbtn bg-success">Submit</button>
+         </form>      
+    </div>
+         <div id="details" class="col-sm-6 form p-5">
+        </div>
+  </div>
+</div>
+</div>
+
+<script>
+
+  $("#frm").submit(function(e)
+
+  {
+
+      e.preventDefault();
+
+      name=$("#name").val();
+
+      email=$("#email").val();
+
+      number=$("#pnum").val();
+      var val = [];
+      $(':checkbox:checked').each(function(i){
+        val[i] = $(this).val();
+        console.log(val[i]);
+      });
+
+      form="<table class='table table-bordered p-5'>";
+
+      form+="<tr>";
+
+      form+="<th>Name</th><th>Email</th><th>PhoneNumber</th><th>Booked</th>";
+
+      form+="</tr>";
+
+      form+="<td>"+name+"</td><td>"+email+"</td><td>"+number+"</td><td>"+val+"</td>";
+
+      form+="</tr>";
+
+      form+="</table>";
+
+      $("#details").html(form);
+
+  });
+
+</script>
+
+</body>
+</html>
